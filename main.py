@@ -56,10 +56,10 @@ async def start_handler(bot: Client, m: Message):
         quote=True,
         reply_markup=InlineKeyboardMarkup(
             [
-                [InlineKeyboardButton("👥 𝐒𝐨𝐮𝐫𝐜𝐞 👥", url="https://GitHub.com/PredatorHackerzZ/Video-Merger_Bot")],
-                [InlineKeyboardButton("⭕ 𝐒𝐮𝐩𝐩𝐨𝐫𝐭 ⭕", url="https://t.me/TeleRoid14"),
-                 InlineKeyboardButton("⭕ 𝐂𝐡𝐚𝐧𝐧𝐞𝐥 ⭕", url="https://t.me/TeleRoidGroup")],
-                [InlineKeyboardButton("🛠 𝐒𝐞𝐭𝐭𝐢𝐧𝐠𝐬 🛠", callback_data="openSettings")]
+                [InlineKeyboardButton("👥 Owner 👥", url="tg://settings")],
+                [InlineKeyboardButton("⭕ Support ⭕", url="https://t.me/settings"),
+                 InlineKeyboardButton("⭕ Channel ⭕", url="https://t.me/settings")],
+                [InlineKeyboardButton("🛠 Settings 🛠", callback_data="openSettings")]
             ]
         )
     )
@@ -354,7 +354,7 @@ async def callback_handlers(bot: Client, cb: CallbackQuery):
         await cb.message.edit(
             text=Config.START_TEXT,
             parse_mode="Markdown",
-            reply_markup=InlineKeyboardMarkup([[InlineKeyboardButton("📕 𝐒𝐨𝐮𝐫𝐜𝐞 ", url="https://GitHub.com/PredatorHackerzZ/Video-Merger_Bot"), InlineKeyboardButton("🌐 𝐒𝐮𝐩𝐩𝐨𝐫𝐭 𝐆𝐫𝐨𝐮𝐩", url="https://t.me/TeleRoid14")], [InlineKeyboardButton("👥 𝐁𝐨𝐭𝐬 𝐂𝐡𝐚𝐧𝐧𝐞𝐥", url="https://t.me/TeleRoidGroup")]]),
+            reply_markup=InlineKeyboardMarkup([[InlineKeyboardButton("📕 𝐒𝐨𝐮𝐫𝐜𝐞 ", url="https://GitHub.com/fake"), InlineKeyboardButton("🌐 𝐒𝐮𝐩𝐩𝐨𝐫𝐭 𝐆𝐫𝐨𝐮𝐩", url="https://t.me/")], [InlineKeyboardButton("👥 𝐁𝐨𝐭𝐬 𝐂𝐡𝐚𝐧𝐧𝐞𝐥", url="https://t.me/")]]),
             disable_web_page_preview=True
         )
     elif "showThumbnail" in cb.data:
